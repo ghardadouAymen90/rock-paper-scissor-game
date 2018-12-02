@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>ROCK PAPER SCISSORS</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="RPS.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Righteous" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="container-fluid text-center main-window">
+    <h3>Click on your choice: Rock, Paper or Scissors</h3>
+    <button type="button" class="instruction" onclick="operInstructions()">instruction</button>
+    <div class="row justify-content-center align-items-around">
+      <div class="col-4">
+        <img class="icon" id="rock" src="rock.jpg" title="Rock">
+      </div>
+      <div class="col-4">
+        <img class="icon" id="paper" src="paper.jpg" title="Paper">
+      </div>
+      <div class="col-4">
+        <img class="icon" id="scissors" src="scissor.jpg" title="Scissors">
+      </div>
+    </div>
+    <p></p>
+
+    <div class="container-fluid show-all d-flex bg-primary">
+      <div class="container-fluid show-hands d-flex justify-content-center align-items-between ">
+
+        <div class="col-4">
+          <p id="myChoice"></p>
+          <img class="choice-me" src="">
+        </div>
+
+        <div class="col-4 my-auto">
+          <p>- VS -</p>
+        </div>
+
+        <div class="col-4">
+          <p id="computerChoice"></p>
+          <img class="choice-computer" src="">
+        </div>
+
+      </div>
+      <div class="container d-flex flex-column justify-content-between text-center">
+        <div class="row">
+          <div class="col-6 col-lg-12 col-md-12">
+            <p id="result"></p>
+            <div id="winner">🏆😻</div>
+            <div id="loser">💔🙀</div>
+            <div id="tie">😓😑</div>
+          </div>
+          <div class="col-6 col-lg-12 col-md-12">
+            <div class="d-flex justify-content-around align-items-center">
+              <span> Me: <div class="total-score-me"></div></span>
+              <p>Score</p>
+              <span>CPE: <div class="total-score-computer"></div></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- Modal for instructions -->
+
+  <div class="modal text-center mx-auto pb-2" tabindex="-1" role="dialog" id="mdl">
+    <div class="modal-dialog" role="document"></div>
+    <div class="modal-content">
+      <div class="modal-header py-1">
+        <h5 class="modal-title">how to play this game</h5>
+        <button type="button" class="close" onclick="CloseInstructionsWindow()" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex flex-column align-items-center py-1">
+        <img src="instructions.png" alt="instructions1" id="ins1" class="pb-2">
+        <img src="Instructions 2.png" alt="Instructions2" id="ins2"class="my-1">
+      </div>
+      <div class="modal-footer py-1">
+        <button type="button" class="btn btn-secondary my-1" onclick="CloseInstructionsWindow()" data-dismiss="modal">Dismiss</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="RPS.js"></script>
+</body>
+
+
+</html>
