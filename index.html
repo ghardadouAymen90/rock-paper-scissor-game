@@ -12,7 +12,7 @@
   <!-- Bootsrap 4 call-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-    <!-- Goole fonts call-->
+  <!-- Goole fonts call-->
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Righteous" rel="stylesheet">
 </head>
 
@@ -21,7 +21,10 @@
 
   <div class="container-fluid text-center main-window">
     <h3>Click on your choice: Rock, Paper or Scissors</h3>
-    <button type="button" class="instruction mb-1" onclick="operInstructions()">instruction</button>
+    <div class="d-flex justify-content-around mx-5">
+      <button type="button" class="instruction mb-1" onclick="operInstructions()">instruction</button>
+      <input type="text" placeholder="Enter your name" id="player-name" class="mb-1 player-name" value="">
+    </div>
     <div class="row justify-content-center align-items-around">
       <div class="col-4">
         <img class="icon" id="rock" src="rock.jpg" title="Rock">
@@ -40,7 +43,7 @@
 
         <div class="col-4">
           <p id="myChoice"></p> <!-- MY choice -->
-          <img class="choice-me" src=""> 
+          <img class="choice-me" src="">
         </div>
 
         <div class="col-4 my-auto">
@@ -89,7 +92,7 @@
       </div>
       <div class="modal-body d-flex flex-column align-items-center py-1">
         <img src="instructions.png" alt="instructions1" id="ins1" class="pb-2">
-        <img src="Instructions 2.png" alt="Instructions2" id="ins2"class="my-1">
+        <img src="Instructions 2.png" alt="Instructions2" id="ins2" class="my-1">
       </div>
       <div class="modal-footer py-1">
         <button type="button" class="btn btn-secondary my-1" onclick="CloseInstructionsWindow()" data-dismiss="modal">Dismiss</button>
@@ -100,7 +103,7 @@
 
 
 
-<!-- Js call-->
+  <!-- Js call-->
 
   <script src="RPS.js"></script>
 </body>
