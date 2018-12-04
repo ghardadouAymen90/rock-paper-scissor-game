@@ -7,6 +7,7 @@ var sameResult = " We Tied, I don't like this......";
 
 
 //selectors
+var playerName = document.querySelector(".player-name");
 var winner = document.querySelector('#winner');//win icons
 var loser = document.querySelector('#loser');//lost icons
 var tie = document.querySelector('#tie');//tie icons
@@ -27,7 +28,7 @@ totalScoreMe.innerHTML = 0; //initiating variable
 // USER'S CHOICE
 rock.addEventListener("click", function () { // choice:rock + event listener to the rock image
     userChoice = 0;
-    myChoice.innerHTML = "You : Rock";
+    myChoice.innerHTML = playerName.value + " : Rock";
     imageMe.src = "rock.jpg"
     imageMe.style.display = 'block';
     checkComputer();
@@ -36,7 +37,7 @@ rock.addEventListener("click", function () { // choice:rock + event listener to 
 
 paper.addEventListener("click", function () { // choice:paper + event listener to the paper image
     userChoice = 1;
-    myChoice.innerHTML = "You : Paper"
+    myChoice.innerHTML = playerName.value + " : Paper"
     imageMe.src = "paper.jpg";
     imageMe.style.display = 'block';
     checkComputer();
@@ -45,7 +46,7 @@ paper.addEventListener("click", function () { // choice:paper + event listener t
 
 scissors.addEventListener("click", function () { // choice:scissors + event listener to the siccors image
     userChoice = 2;
-    myChoice.innerHTML = "You : Scissors";
+    myChoice.innerHTML = playerName.value + " : Scissors";
     imageMe.src = "scissor.jpg";
     imageMe.style.display = 'block';
     checkComputer();
@@ -59,7 +60,7 @@ scissors.addEventListener("click", function () { // choice:scissors + event list
 
 // COMPUTER'S CHOICE
 function checkComputer() {
-    randomNum = Math.floor(Math.random()*3);    // generates a random number between 0-2 
+    randomNum = Math.floor(Math.random() * 3);    // generates a random number between 0-2 
 
     // assign the random number to one of the 3 choices
     if (randomNum === 0) {
